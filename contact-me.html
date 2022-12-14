@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact Me</title>
+    <title>Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="contact-me.css" />
   </head>
 
   <body>
-    <!-- TODO -->
+    <div class="container">
+      <h1>Contact Me</h1>
+      <form id="contact-form" action="">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input
+            id="first-name"
+            class="form-control validate-input"
+            type="text"
+            name="first-name"
+            
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input
+            id="last-name"
+            class="form-control validate-input"
+            type="text"
+            name="last-name"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            class="form-control validate-input"
+            type="email"
+            name="email"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="kind">What can we help with?</label>
+          <select class="form-control" name="kind" id="contact-kind">
+            <option value="choose" selected="selected" disabled>
+              Choose one
+            </option>
+            <option value="business">I'm interested in your software</option>
+            <option value="technical">I need technical support</option>
+          </select>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message"></textarea>
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-check mb-3">
+          <input
+          class="form-check-input"
+            type="checkbox"
+            name="yes-newsletter"
+          />
+          <label class="form-check-label" for="yes-newsletter"
+            >Join Newsletter?
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="doge">How much DogeCoin u donate me?</label>
+          <input type="number" id="doge" min=20 max="50" step="2">
+        </div>
+
+        <div class="form-group">
+          <input class="button btn-primary" type="submit" value="Sign up" />
+        </div>
+      </form>
+    </div>
+
+    <script src="contact-me.js"></script>
   </body>
 </html>

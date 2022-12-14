@@ -12,3 +12,6 @@ input:invalid{
 .hide{
     display:none;
 }
+.show{
+    display:block;
+}
