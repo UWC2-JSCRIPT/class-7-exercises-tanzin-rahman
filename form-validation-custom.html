@@ -13,7 +13,7 @@
 
   <body>
     <div class="container">
-      <h1>Connect With Us</h1>
+      <h1>Form Validation</h1>
       <form id="connect-form" action="">
         <div class="form-group">
           <label for="first-name">First Name</label>
@@ -22,7 +22,8 @@
             class="form-control validate-input"
             type="text"
             name="first-name"
-            
+            required
+            minlength="3"
           />
           <small class="error" aria-live="polite"></small>
         </div>
@@ -34,6 +35,8 @@
             class="form-control validate-input"
             type="text"
             name="last-name"
+            required
+            minlength="3"
             
           />
           <small class="error" aria-live="polite"></small>
@@ -51,20 +54,48 @@
         </div>
 
         <div class="form-group">
-          <label for="kind">What can we help with?</label>
-          <select class="form-control" name="kind" id="contact-kind">
+          <label for="kind">What can we help with?</label>          
+          <select 
+          required
+          class="form-control" 
+          name="kind" 
+          id="contact-kind"
+          >
             <option value="choose" selected="selected" disabled>
-              Choose one
-            </option>
+              Choose one</option>
             <option value="business">I'm interested in your software</option>
             <option value="technical">I need technical support</option>
           </select>
           <small class="error" aria-live="polite"></small>
         </div>
 
+        <div class="form-group business hide">
+          <label for="company-size">Number of people in company</label>
+          <input
+          id = "company-size"
+          class = "form-control validate-input"
+          type = "number"
+          name = "company-size"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group technical hide">
+          <label for="support-type">What software are you using?</label>
+          <input
+          id = "support-type"
+          class = "form-control validate-input"
+          type = "text"
+          name = "support-type"
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+
         <div class="form-check mb-3">
           <input
-            class="form-check-input"
+
+          class="form-check-input"
             type="checkbox"
             name="yes-newsletter"
           />
@@ -75,15 +106,16 @@
 
         <div class="form-group">
           <label for="doge">How much DogeCoin u donate me?</label>
-          <input type="number" id="doge" min=20>
+          <input type="number" id="doge" min=20 max="50" step="2">
         </div>
 
         <div class="form-group">
-          <input class="btn btn-primary" type="submit" value="Sign up" />
+          <input class="button btn-primary" type="submit" value="Sign up" />
         </div>
       </form>
     </div>
 
-    <script src="form-validation-custom.js"></script>
+    <script defer src="form-validation-custom.js"></script>
   </body>
 </html>
+

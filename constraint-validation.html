@@ -22,7 +22,8 @@
             class="form-control validate-input"
             type="text"
             name="first-name"
-            
+            required
+            minlength="3"
           />
           <small class="error" aria-live="polite"></small>
         </div>
@@ -34,6 +35,8 @@
             class="form-control validate-input"
             type="text"
             name="last-name"
+            required
+            minlength="3"
             
           />
           <small class="error" aria-live="polite"></small>
@@ -64,7 +67,8 @@
 
         <div class="form-check mb-3">
           <input
-            class="form-check-input"
+
+          class="form-check-input"
             type="checkbox"
             name="yes-newsletter"
           />
@@ -75,15 +79,15 @@
 
         <div class="form-group">
           <label for="doge">How much DogeCoin u donate me?</label>
-          <input type="number" id="doge" min=20>
+          <input type="number" id="doge" min=20 max="50" step="2">
         </div>
 
         <div class="form-group">
-          <input class="btn btn-primary" type="submit" value="Sign up" />
+          <input class="button btn-primary" type="submit" value="Sign up" />
         </div>
       </form>
     </div>
 
-    <script src="constraint-validation.js"></script>
+    <script defer src="constraint-validation.js"></script>
   </body>
 </html>
